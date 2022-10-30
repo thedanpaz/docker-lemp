@@ -28,6 +28,8 @@ services:
     container_name: lemp-web
     build:
       context: ./
+      args:
+        - WITH_BASIC_AUTH=${WITH_BASIC_AUTH}
       dockerfile: web.dockerfile
     working_dir: /var/www
     volumes_from:
